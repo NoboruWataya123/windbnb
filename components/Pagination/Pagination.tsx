@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styles from './Pagination.module.css'
 
-export default function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }) {
+export default function Pagination({ data, RenderComponent, title, pageLimit, dataLimit }: any) {
     const [pages] = useState(Math.round(data.length / dataLimit));
     const [currentPage, setCurrentPage] = useState(1);
   
@@ -13,7 +13,7 @@ export default function Pagination({ data, RenderComponent, title, pageLimit, da
         setCurrentPage((page) => (Math.max( page - 1, 1))); 
       }
   
-      function changePage(event) {
+      function changePage(event: any) {
         const pageNumber = Number(event.target.textContent);
         setCurrentPage(pageNumber);
       }
@@ -26,7 +26,7 @@ export default function Pagination({ data, RenderComponent, title, pageLimit, da
   
       const getPaginationGroup = () => {
         let start = Math.floor((Math.max(currentPage - 1, 1)) / pageLimit) * pageLimit;
-        return new Array(pageLimit).fill().map((_, idx) => start + idx + 1);
+        return new Array(pageLimit).fill(null).map((_, idx) => start + idx + 1);
       };
   
       return (
@@ -34,7 +34,7 @@ export default function Pagination({ data, RenderComponent, title, pageLimit, da
       
           {/* show the posts, 10 posts at a time */}
           <div className={styles.container}>
-            {getPaginatedData().map((d, idx) => (
+            {getPaginatedData().map((d: any, idx: any) => (
               <RenderComponent key={idx} data={d} />
             ))}
                 <div className={styles.pagination}>
