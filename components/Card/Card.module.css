@@ -1,0 +1,15 @@
+.wrapper{
+    margin-top: 2rem;
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 29px;
+
+color: #333333;
+}

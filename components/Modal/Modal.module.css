@@ -1,0 +1,268 @@
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    display: none;
+    background: hsl(0, 0%, 100%);
+    z-index: 10;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 25%;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+.location{
+  
+}
+
+
+.location__input{
+  border: 1px solid #333333;
+  box-sizing: border-box;
+  filter: drop-shadow(0px 1px 6px rgba(0, 0, 0, 0.1));
+  border-radius: 16px;
+  width: 38rem;
+  height: 3rem;
+  padding-left: 2rem;
+}
+
+.location__input:focus{
+  outline: none;
+  border: 1px solid #333333;
+  border-radius: 16px;
+}
+.guest{
+
+}
+
+.guest__input{
+  max-width: 60rem;
+  height: 3rem;
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  text-align: start;
+  font-size: larger;
+  padding-left: 2rem;
+}
+
+.guest__input:focus{
+  border: none;
+  outline: #FFFFFF;
+}
+
+.search__button{
+  width: 10rem;
+  height: 3rem;
+  border: none;
+  background: #EB5757;
+  box-shadow: 0px 1px 6px #0000001a;
+  border-radius: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    display: none;
+    background: hsl(0, 0%, 100%);
+    z-index: 10;
+    justify-content: start;
+    align-items: flex-start;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+  .container{
+    flex-direction: column;
+    margin: 0;
+  }
+  .location{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .description{
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: column;
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+  }
+  .location__input{
+    width: 100%;
+    border: 0;
+  }
+  .guest{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .guest__input{
+    width: 100%;
+    border-radius: 16px;
+  }
+  .guest__input:focus{
+    border: 1px solid #333333;
+    outline: #FFFFFF;
+  }
+  .search__button{
+    width: 100%;
+    margin-top: 1rem;
+  }
+  .desc__search_container{
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 10rem;
+  }
+  .guest_desc{
+    width: 100%;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.guest_desc_adults{
+font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+width: 10rem;
+margin: 2rem 0 1rem 0;
+color: #333333;
+}
+}
+
+@media screen and (min-width: 768px) {
+  .description{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.desc__search_container{
+  width: 36rem;
+  height: 10rem;
+}
+
+.search_desc__list{
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.search_desc__list_item{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #4F4F4F;
+  margin-top: 2rem;
+}
+
+.guest_desc{
+    width: 22rem;
+    padding-left: 2rem;
+    margin-top: 3rem;
+}
+
+.guest_desc_adults{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 10rem;
+  margin: 2rem 0 1rem 0;
+  color: #333333;
+}
+
+.guest_desc_info{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  
+  color: hsl(0, 0%, 62%);
+}
+
+.desc__btn{
+
+}
+
+.button{
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: transparent;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.button:active{
+  transition: all transform 0.2s;
+  transform: scale(0.9);
+}
+
+.result{
+  font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+color: #333333;
+margin-inline: 1rem ;
+}
+
+.guest_desc_kids{
+  font-family: Mulish;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  width: 10rem;
+  margin: 2rem 0 1rem 0;
+  color: #333333;
+}
+
+.gust_desc_info{
+
+}
